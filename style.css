@@ -21,12 +21,13 @@ html {
 /* ------------------ navigation bar styling -------------------- */
 
 .dropdown-menu {
-    position: absolute;
-    top: 85px;
+    position: sticky;
+    top: 0;
     left: 0;
     z-index: 1001;
     width: 100vw;
     height: 0;
+    transition: height .4s ease-in;
     background: #6e6e6e;
     display: none;
 }
