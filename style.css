@@ -20,9 +20,13 @@ html {
 
 /* ------------------ navigation bar styling -------------------- */
 
+.book-btn i {
+    display: none;
+}
+
 .dropdown-menu {
     position: sticky;
-    top: 0;
+    top: 80px;
     left: 0;
     z-index: 1001;
     width: 100vw;
@@ -30,6 +34,11 @@ html {
     transition: height .4s ease-in;
     background: #6e6e6e;
     display: none;
+}
+
+.toggle_dropdown {
+    display: block;
+    height: auto;
 }
 
 .dropdown-menu-section li {
@@ -40,12 +49,6 @@ html {
 
 .dropdown-menu-section li a {
     color: aliceblue;
-}
-
-.into-mark {
-    float: right;
-    margin-right: 20px;
-    margin-top: 20px;
 }
 
 .nav-bar {
@@ -121,14 +124,14 @@ html {
     background: url("images/home-bg.jpg") no-repeat;
     background-size: cover;
     padding: 8rem 10% 3rem;
-    min-height: 100vh;
+    min-height: auto;
+    background-position: center;
 }
 
 .home .hoin-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
 }
 
 .ma-heng h1 {
@@ -149,7 +152,6 @@ html {
 
 .ani-img img {
     animation: bounce infinite 2s linear;
-    transition: all .5 linear;
     padding-left: 120px;
     height: 20rem;
 }
@@ -206,9 +208,9 @@ html {
 .menu-heading p,
 .review-heading p,
 .book-heading p {
-    font-size:5rem;
+    font-size: 5rem;
     color: rgba(0, 0, 0, 0.311);
-    -webkit-text-stroke: 0.1px;
+    -webkit-text-stroke: 1px;
     text-transform: uppercase;
     position: relative;
     z-index: -1;
@@ -222,6 +224,7 @@ html {
 .book-heading p span {
     position: absolute;
     z-index: 100;
+    -webkit-text-stroke: 0px;
     top: 26%;
     left: 25%;
     font-size: 24px;
@@ -233,14 +236,16 @@ html {
 
 .ab-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 20px;
+
 }
 
 .ab-content .img {
     margin-right: 50px;
-    width: 1200px;
+    flex-basis: 60%;
+    display: flex;
 }
 
 .ab-content .img img {
@@ -265,6 +270,9 @@ html {
 
 .inner-content {
     margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 40%;
 }
 
 .inner-content h1 {
@@ -319,7 +327,7 @@ html {
 }
 
 .menu-items .card {
-    margin: 20px 40px;
+    margin: 10px 25px;
     width: 500px;
     padding: 30px 30px 30px 60px;
     border: 2px solid #101101;
@@ -389,7 +397,7 @@ html {
 /* ------------------- Booking Section Styling ------------------- */
 
 .booking-form {
-    height: 70vh;
+    height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -399,9 +407,9 @@ html {
 .booking-form form {
     display: flex;
     flex-direction: column;
-    width: 600px;
+    width: 500px;
     border: 2px solid #000;
-    padding: 50px 20px;
+    padding: 60px 40px;
     border-radius: 4% 95% 6% 95% / 95% 4% 92% 5%;
 }
 
@@ -483,14 +491,250 @@ html {
     border-bottom: 2px dashed #ffffff;
 }
 
-/* ------------------- Media Query width 576 ----------------------- */
+/* ------------------- Media Querys ----------------------- */
 
-@media (max-width:576px) {
+@media screen and (min-width:1201px) {
+    .ma-heng h1 {
+        font-size: clamp(3rem, 20px, 6rem);
+    }
+
+    .ma-heng p {
+        font-size: clamp(1rem, 20px, 3rem);
+    }
+
+    .logo p {
+        font-size: clamp(1.5rem, 30px, 4rem);
+    }
+
+    .inner-content h1 {
+        font-size: 25px;
+    }
+
+    .menu-items .card {
+        width: clamp(200px, 420px, 800px);
+    }
+
+    .booking-form {
+        margin: 80px 0px;
+    }
+
+    .booking-form form {
+        width: 650px;
+    }
+}
+
+@media (max-width:1200px) {
+    .ma-heng h1 {
+        font-size: 50px;
+    }
+
+    .about-heading p,
+    .menu-heading p,
+    .review-heading p,
+    .book-heading p {
+        font-size: 4.2rem;
+    }
+
+    .about-heading p span,
+    .menu-heading p span,
+    .review-heading p span,
+    .book-heading p span {
+        font-size: 21px;
+    }
+
+    .inner-content h1 {
+        font-size: 21px;
+    }
+
+    .inner-content p {
+        font-size: 12px;
+    }
+
+    .book-btn button {
+        padding: 8px 22px;
+        font-size: 0.8rem;
+    }
+
+    .special .special-options {
+        padding: 10px 22px;
+        margin: 10px 4px;
+    }
+
+    .menu {
+        padding: 5rem 7% 1rem;
+    }
+
+    .menu-items .card {
+        width: 376px;
+    }
+
+    .booking-form {
+        margin: 50px 0;
+    }
+
+    .booking-form form {
+        padding: 20px 35px;
+    }
+}
+
+@media (max-width:992px) {
+    .nav-bar {
+        padding: 20px 6%;
+    }
+
+    .logo p {
+        font-size: 26px;
+    }
+
+    .sections-list a {
+        margin: 0 8px;
+        font-size: 14px;
+    }
+
+    .book-btn button {
+        font-size: 0.7rem;
+        padding: 7px 20px;
+    }
+
+    .ma-heng h1 {
+        font-size: 40px;
+    }
+
+    .ani-img {
+        margin-right: 0px;
+    }
+
+    .ani-img img {
+        height: 16rem;
+    }
+
+    .about {
+        padding: 2rem 6%;
+    }
+
+    .about-heading p,
+    .menu-heading p,
+    .review-heading p,
+    .book-heading p {
+        font-size: 3.5rem;
+    }
+
+    .about-heading p span,
+    .menu-heading p span,
+    .review-heading p span,
+    .book-heading p span {
+        font-size: 18px;
+    }
+
+    .ab-content .img {
+        margin-right: 0px;
+    }
+
+    .inner-content h1 {
+        font-size: 18px;
+    }
+
+    .inner-content p {
+        font-size: 11px;
+    }
+
+    .special .special-options img {
+        width: 30px;
+    }
+
+    .special .special-options {
+        padding: 8px 10px;
+        margin: 8px;
+    }
+
+    .special .special-options h4 {
+        font-size: 10px;
+    }
+
+    .menu {
+        padding: 2rem 6%;
+    }
+
+    .menu-items .card {
+        width: 287px;
+        padding: 29px 10px 30px 52px;
+    }
+
+    .menu-items .card img {
+        top: 40%;
+    }
+
+    .booking-form {
+        margin: 60px 0;
+    }
+
+    .booking-form form {
+        padding: 20px 35px;
+    }
+
+    .footer-links .navigate-links {
+        margin: 5px 40px 20px;
+    }
+}
+
+@media (max-width:768px) {
     .sections-list {
         display: none;
     }
 
-    .logo p .fa-bars {
-        display: inline;
+    .book-btn .table-book {
+        display: none;
+    }
+
+    .book-btn i {
+        display: block;
+        font-size: 22px;
+    }
+
+    .logo p{
+        font-size: 30px;
+    }
+
+    .ma-heng h1{
+        font-size: 34px;
+    }
+
+    .home .hoin-content {
+        flex-wrap: wrap;
+    }
+
+    .ab-content{
+        display: block;
+    }
+
+    .inner-content h1{
+        margin-top: 10px;
+        font-size: 36px;
+    }
+
+    .inner-content p{
+        font-size: 15px;
+    }
+
+    .special .special-options {
+        padding: 16px 22px;
+        margin: 20px;
+    }
+
+    .menu-items .card {
+        width: 500px;
+    }
+
+}
+
+@media (max-width:576px){
+    .menu-items .card {
+        width: 400px;
+    }
+}
+
+@media (max-width:400px){
+    .menu-items .card {
+        width: 300px;
     }
 }
