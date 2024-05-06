@@ -561,7 +561,9 @@ html {
     }
 
     .menu {
-        padding: 5rem 7% 1rem;
+        padding-top: 5rem;
+        padding-left: 7%;
+        padding-right:7%;
     }
 
     .menu-items .card {
@@ -609,7 +611,8 @@ html {
     }
 
     .about {
-        padding: 2rem 6%;
+        padding-left: 6%;
+        padding-right:6%;
     }
 
     .about-heading p,
@@ -652,7 +655,8 @@ html {
     }
 
     .menu {
-        padding: 2rem 6%;
+        padding-left: 6%;
+        padding-right: 6%;
     }
 
     .menu-items .card {
