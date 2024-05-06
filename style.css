@@ -691,11 +691,11 @@ html {
         font-size: 22px;
     }
 
-    .logo p{
+    .logo p {
         font-size: 30px;
     }
 
-    .ma-heng h1{
+    .ma-heng h1 {
         font-size: 34px;
     }
 
@@ -703,16 +703,16 @@ html {
         flex-wrap: wrap;
     }
 
-    .ab-content{
+    .ab-content {
         display: block;
     }
 
-    .inner-content h1{
+    .inner-content h1 {
         margin-top: 10px;
         font-size: 36px;
     }
 
-    .inner-content p{
+    .inner-content p {
         font-size: 15px;
     }
 
@@ -727,13 +727,13 @@ html {
 
 }
 
-@media (max-width:576px){
+@media (max-width:576px) {
     .menu-items .card {
         width: 400px;
     }
 }
 
-@media (max-width:400px){
+@media (max-width:400px) {
     .menu-items .card {
         width: 300px;
     }
