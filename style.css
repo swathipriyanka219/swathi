@@ -692,7 +692,8 @@ html {
 
     .book-btn i {
         display: block;
-        font-size: 22px;
+        font-size: 25px;
+        cursor: pointer;
     }
 
     .logo p {
@@ -709,6 +710,7 @@ html {
 
     .ab-content {
         display: block;
+        margin-top: 50px;
     }
 
     .inner-content h1 {
