@@ -7,6 +7,7 @@
     scroll-behavior: smooth;
     text-decoration: none;
     list-style: none;
+    color: #101101;
     border: none;
     box-sizing: border-box;
     outline: none;
@@ -19,10 +20,6 @@ html {
 }
 
 /* ------------------ navigation bar styling -------------------- */
-
-.book-btn i {
-    display: none;
-}
 
 .dropdown-menu {
     position: sticky;
@@ -104,17 +101,18 @@ html {
     align-items: center;
 }
 
-.book-btn button {
+.book-btn button,
+.book-btn a {
     background-color: transparent;
     font-size: 0.9rem;
     border: 2px solid #101101;
     padding: 10px 25px;
-    border-radius: 80% 30% 10% 10% / 20% 30% 20% 80%;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-.book-btn button:hover {
-    border-radius: 4% 95% 6% 95% / 95% 4% 92% 5%;
+.book-btn button:hover,
+.book-btn a:hover {
     border: 2px dashed #101101;
     transition: all .2s linear;
 }
@@ -249,24 +247,11 @@ html {
 }
 
 .ab-content .img img {
-    border-radius: 30% 10% 10% 4% / 10% 4% 5% 80%;
-    animation: borderChange 6s infinite;
+    border-radius: 5px;
     overflow: hidden;
     width: 100%;
 }
 
-@keyframes borderChange {
-
-    0%,
-    100% {
-        border-radius: 4% 95% 6% 95% / 95% 4% 92% 5%;
-    }
-
-    50% {
-        border-radius: 80% 60% 60% 40% / 40% 70% 50% 80%;
-    }
-
-}
 
 .inner-content {
     margin-left: 20px;
@@ -304,7 +289,7 @@ html {
     padding: 15px 25px;
     margin: 10px;
     margin-top: 25px;
-    border-radius: 4% 95% 6% 95% / 95% 4% 92% 5%;
+    border-radius: 5px;
     border: 2px solid #000;
 }
 
@@ -331,13 +316,13 @@ html {
     width: 500px;
     padding: 30px 30px 30px 60px;
     border: 2px solid #101101;
-    border-radius: 80% 30% 10% 10% / 20% 30% 20% 80%;
+    border-radius: 5px;
     position: relative;
     color: #000;
 }
 
 .menu-items .card:hover {
-    border-radius: 4% 95% 6% 95% / 95% 4% 92% 5%;
+    border-radius: 5px;
     border: 2px dashed #101101;
     transition: all .5s linear;
 }
@@ -373,7 +358,7 @@ html {
     padding: 20px 30px;
     text-align: center;
     border: 1.5px solid #000;
-    border-radius: 4% 95% 6% 95% / 95% 4% 92% 5%;
+    border-radius: 5px;
     position: relative;
     transition: all .2s linear;
 }
@@ -397,7 +382,6 @@ html {
 /* ------------------- Booking Section Styling ------------------- */
 
 .booking-form {
-    height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -410,7 +394,7 @@ html {
     width: 500px;
     border: 2px solid #000;
     padding: 60px 40px;
-    border-radius: 4% 95% 6% 95% / 95% 4% 92% 5%;
+    border-radius: 5px;
 }
 
 .booking-form form input,
@@ -443,7 +427,7 @@ html {
     height: auto;
     padding: 40px 10%;
     background-color: #101101;
-    color: aliceblue;
+    color: rgb(255, 255, 255) !important;
 }
 
 .footer-links {
@@ -460,9 +444,14 @@ html {
 }
 
 .navigate-links a {
-    color: aliceblue;
     margin: 10px 8px;
     font-size: 15px;
+}
+
+.navigate-links a i,
+.navigate-links a span,
+.navigate-links h2 {
+    color: rgb(255, 255, 255) !important;
 }
 
 .navigate-links h2 {
@@ -485,262 +474,9 @@ html {
 
 .copyright p {
     font-size: 22px;
+    color: rgb(255, 255, 255);
 }
 
 .copyright p span {
     border-bottom: 2px dashed #ffffff;
-}
-
-/* ------------------- Media Querys ----------------------- */
-
-@media screen and (min-width:1201px) {
-    .ma-heng h1 {
-        font-size: clamp(3rem, 20px, 6rem);
-    }
-
-    .ma-heng p {
-        font-size: clamp(1rem, 20px, 3rem);
-    }
-
-    .logo p {
-        font-size: clamp(1.5rem, 30px, 4rem);
-    }
-
-    .inner-content h1 {
-        font-size: 25px;
-    }
-
-    .menu-items .card {
-        width: clamp(200px, 420px, 800px);
-    }
-
-    .booking-form {
-        margin: 80px 0px;
-    }
-
-    .booking-form form {
-        width: 650px;
-    }
-}
-
-@media (max-width:1200px) {
-    .ma-heng h1 {
-        font-size: 50px;
-    }
-
-    .about-heading p,
-    .menu-heading p,
-    .review-heading p,
-    .book-heading p {
-        font-size: 4.2rem;
-    }
-
-    .about-heading p span,
-    .menu-heading p span,
-    .review-heading p span,
-    .book-heading p span {
-        font-size: 21px;
-    }
-
-    .inner-content h1 {
-        font-size: 21px;
-    }
-
-    .inner-content p {
-        font-size: 12px;
-    }
-
-    .book-btn button {
-        padding: 8px 22px;
-        font-size: 0.8rem;
-    }
-
-    .special .special-options {
-        padding: 10px 22px;
-        margin: 10px 4px;
-    }
-
-    .menu {
-        padding-top: 5rem;
-        padding-left: 7%;
-        padding-right:7%;
-    }
-
-    .menu-items .card {
-        width: 376px;
-    }
-
-    .booking-form {
-        margin: 50px 0;
-    }
-
-    .booking-form form {
-        padding: 20px 35px;
-    }
-}
-
-@media (max-width:992px) {
-    .nav-bar {
-        padding: 20px 6%;
-    }
-
-    .logo p {
-        font-size: 26px;
-    }
-
-    .sections-list a {
-        margin: 0 8px;
-        font-size: 14px;
-    }
-
-    .book-btn button {
-        font-size: 0.7rem;
-        padding: 7px 20px;
-    }
-
-    .ma-heng h1 {
-        font-size: 40px;
-    }
-
-    .ani-img {
-        margin-right: 0px;
-    }
-
-    .ani-img img {
-        height: 16rem;
-    }
-
-    .about {
-        padding-left: 6%;
-        padding-right:6%;
-    }
-
-    .about-heading p,
-    .menu-heading p,
-    .review-heading p,
-    .book-heading p {
-        font-size: 3.5rem;
-    }
-
-    .about-heading p span,
-    .menu-heading p span,
-    .review-heading p span,
-    .book-heading p span {
-        font-size: 18px;
-    }
-
-    .ab-content .img {
-        margin-right: 0px;
-    }
-
-    .inner-content h1 {
-        font-size: 18px;
-    }
-
-    .inner-content p {
-        font-size: 11px;
-    }
-
-    .special .special-options img {
-        width: 30px;
-    }
-
-    .special .special-options {
-        padding: 8px 10px;
-        margin: 8px;
-    }
-
-    .special .special-options h4 {
-        font-size: 10px;
-    }
-
-    .menu {
-        padding-left: 6%;
-        padding-right: 6%;
-    }
-
-    .menu-items .card {
-        width: 287px;
-        padding: 29px 10px 30px 52px;
-    }
-
-    .menu-items .card img {
-        top: 40%;
-    }
-
-    .booking-form {
-        margin: 60px 0;
-    }
-
-    .booking-form form {
-        padding: 20px 35px;
-    }
-
-    .footer-links .navigate-links {
-        margin: 5px 40px 20px;
-    }
-}
-
-@media (max-width:768px) {
-    .sections-list {
-        display: none;
-    }
-
-    .book-btn .table-book {
-        display: none;
-    }
-
-    .book-btn i {
-        display: block;
-        font-size: 25px;
-        cursor: pointer;
-    }
-
-    .logo p {
-        font-size: 30px;
-    }
-
-    .ma-heng h1 {
-        font-size: 34px;
-    }
-
-    .home .hoin-content {
-        flex-wrap: wrap;
-    }
-
-    .ab-content {
-        display: block;
-        margin-top: 50px;
-    }
-
-    .inner-content h1 {
-        margin-top: 10px;
-        font-size: 36px;
-    }
-
-    .inner-content p {
-        font-size: 15px;
-    }
-
-    .special .special-options {
-        padding: 16px 22px;
-        margin: 20px;
-    }
-
-    .menu-items .card {
-        width: 500px;
-    }
-
-}
-
-@media (max-width:576px) {
-    .menu-items .card {
-        width: 400px;
-    }
-}
-
-@media (max-width:400px) {
-    .menu-items .card {
-        width: 300px;
-    }
 }
